@@ -10,6 +10,7 @@ def shutdown():
     subprocess.Popen(['sudo', '/sbin/shutdown', '-h', 'now'])
     return "Shutting down...", 200
 
+@app.route('/', methods=['GET'])
 @app.route('/status', methods=['GET'])
 def status():
     # Simply return a 200 status
